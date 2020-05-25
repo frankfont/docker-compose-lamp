@@ -69,3 +69,19 @@ RUN a2enmod rewrite headers
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+# Install UserFrosting Dependencies (UFD) from here on ...
+
+# UFD Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get update
+RUN apt-get install -y nodejs
+
+# UFD other utils
+RUN apt-get install -y unzip
+
+# Install UserFrosting
+WORKDIR /var/www/html
+RUN git clone https://github.com/userfrosting/UserFrosting.git UserFrosting
+WORKDIR /var/www/html/UserFrosting
+RUN composer install
