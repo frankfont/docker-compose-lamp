@@ -1,6 +1,14 @@
-#  LAMP stack built with Docker Compose
+#  UF FORK of LAMP stack built with Docker Compose
 
-  
+You can run the User Frosting framework by firing up this stack using the php7.4 option.
+
+## Basic Instructions
+
+1. Make sure `Docker` and `docker-compose` are properly configured.
+1. Copy `sample.env` to `.env`
+1. Open terminal and run `docker-compose up`
+1. Open a terminal into the php7.4 container as root and follow the User Frosting composer and bake commands from <https://learn.userfrosting.com/installation/environment/native>.
+
 
 ![Landing Page](https://preview.ibb.co/gOTa0y/LAMP_STACK.png)
 
